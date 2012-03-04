@@ -1,0 +1,253 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {  
+  margin: 0; padding: 0; border: 0; outline: 0; vertical-align: baseline; background: transparent; }
+body { line-height: 1; font-size: 100%; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  /*font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;*/
+  font: 1.0em/1.375em 'skolar regular', georgia, serif;
+  /*font-size:12px;*/
+  line-height:1.5em;
+  padding:1em;
+  background:#fefefe;
+  /*background: color position size repeat origin clip attachment image;*/
+  background: #fefefe url(curl.jpg) top right no-repeat ;
+}
+
+div#content {
+  width: 61.8%;
+  float: left;
+}
+
+div#plugins {
+  width: 23%;
+  margin-left: 20px;
+  float: left;
+}
+
+div#plugins h3 {
+  text-decoration: underline;
+}
+
+a { color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0px 3px 0px 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1 {
+  padding: 0.5em;
+  font-family: 'Fugaz One', sans-serif;
+}
+
+h1 a, h1 a:hover, h1 a:visited, h1 a:active, h1 a:focus {
+  color: black;
+}
+
+h2 {
+  font-family: 'Exo', Georgia, sans-serif;
+  font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h1,h3,h4,h5,h6{ font-weight: bold; color: #555;}
+h1{ font-size:2em; }
+h2{ font-size:1.5em; }
+h3{ font-size:1.2em; }
+h4{ font-size:1em; }
+h5{ font-size:0.9em; }
+h6{ font-size:0.7em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.875em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px;}
+pre code { border: 0px !important; }
+
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+/*body{font-size:14px;}*/
+}
+
+@media only screen and (min-width: 768px) {
+/*body{font-size:16px;}*/
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:11pt; max-width:100%;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+  div#plugins { display: none; }
+}
+
+div.post {
+  background: none repeat scroll 0 0 #EEEEEE;
+  border-radius: 3px 3px 3px 3px;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+div.post div {
+  background-color: white;
+}
+
+div.post div p, div.post div h3, div.post div h4, div.post div h5, div.post div pre {
+  padding: 0px 15px;
+}
+
+div.post div pre {
+  margin: 0px 15px;
+}
+
+div.post div table {
+  margin: 15px 15px;
+}
+
+div.post div table th {
+  padding: 8px;
+  background-color: #ccc;
+}
+div.post div table td {
+  padding: 8px;
+}
+
+div.post div table tr:nth-child(even) {
+  background-color: #eee;
+}
+
+div.post div.footnotes {
+  padding: 0px;
+  margin: 0px;
+}
+div.post div.footnotes ol {
+  margin: 0px;
+  margin-top: 1em;
+  border-top: 1px solid #ccc;
+  font-size: 0.8em;
+}
+div.post div.footnotes hr {
+  display: none;
+}
+
+h2 {
+  font-weight: bold;
+  padding: 10px 10px;
+  color: #555;
+  text-shadow: 0 1px 0 white;
+  display: block;
+  border: 1px solid #CACACA;
+  /*border-bottom: 0 none;*/
+  background: linear-gradient(#FAFAFA,#EAEAEA);
+  background: -moz-linear-gradient(#FAFAFA,#EAEAEA);
+  background: -webkit-linear-gradient(#FAFAFA,#EAEAEA);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA',endColorstr='#EAEAEA')";
+  background: linear-gradient(#FAFAFA,#EAEAEA);
+}
+
+div.post span.date {
+  float: right;
+  margin-right: 5px;
+  margin-top: 0px;
+  color: #aaa;
+  font-size: 0.8em;
+}
+
+div#plugins {
+  font-size: 0.9em;
+}
+
+div.post div.readmore {
+  padding: 0;
+  float: right;
+  margin-bottom: 0px;
+  margin-right: 5px;
+}
+
+div.post div.cleaner {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
