@@ -1,44 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php include 'core.php'; ?>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<?php
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-$baseUrl = 'http://test.brucek.cz';
-
-function baseurl($str='') {
-	global $baseUrl;
-	return $baseUrl.'/'.$str;
-}
-?>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-		<script type="text/javascript" src="resources/sh_main.min.js"></script>
-		<script type="text/javascript" src="resources/sh_php.js"></script>
-		<link type="text/css" rel="stylesheet" href="resources/style.css" />
-		<link type="text/css" rel="stylesheet" href="resources/sh_typical.min.css" />
-		<title>Testing page</title>
+		<script type="text/javascript" src="<?php echo Config::baseUrl('resources/sh_main.min.js'); ?>"></script>
+		<script type="text/javascript" src="<?php echo Config::baseUrl('resources/sh_php.js'); ?>"></script>
+		<link type="text/css" rel="stylesheet" href="<?php echo Config::baseUrl('resources/style.css'); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo Config::baseUrl('resources/sh_typical.min.css'); ?>" />
+		<title><?php echo Config::$title; ?></title>
 	</head>
 
 	<body onload="sh_highlightDocument('resources/', '.js');">
-		<h1><a href="<?php echo baseurl(); ?>">honza.brucek.cz</a></h1>
+		<h1><a href="<?php echo Config::baseUrl(); ?>"><?php echo Config::$title; ?></a></h1>
 		<hr />
 		<div id="content">
-			<?php include('core.php'); ?>
+			<?php content(); ?>
 		</div>
 		<div id="plugins">
-			<?php
-				$dir = opendir('plugins');
-				$first = true;
-				while ($file = readdir($dir)) {
-					if (substr($file, 0, 1) == '.' || substr(strtolower($file), -3) != 'php') continue;
-					if (!$first) {
-						echo '<hr />';
-					}
-					include('plugins/'.$file);
-					$first = false;
-				}
-			?>
+			<?php plugins(); ?>
 		</div>
 
 		<script type="text/javascript">
