@@ -9,13 +9,13 @@ class Config {
 	 * BaseUrl without trailing slash
 	 * @var string
 	 */
-	public static $baseUrl = 'http://localhost/brucek.cz/h2';
+	public static $baseUrl = '/brucek.cz/h2';
 
 	/**
 	 * Website title, used in h1 and <title>
 	 * @var string
 	 */
-	public static $title = 'Testing page';
+	public static $title = 'Markdown Blogger';
 	
 	/**
 	 * Name of the content directory
